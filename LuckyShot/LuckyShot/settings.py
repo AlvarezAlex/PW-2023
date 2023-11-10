@@ -61,6 +61,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'LuckyShot.urls'
 
+INSTALLED_APPS = [
+    # ...
+    'bootstrap4',
+    # ...
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
