@@ -6,7 +6,17 @@ body {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.btn-primary{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+  
+  .btn-primary:hover {
+    background-color: #555555;
+    color: white;
+    border: 2px solid #555555;
+  }
 .navbar {
     background-color: #000;
     padding: 10px;
@@ -66,8 +76,6 @@ a:hover {
     width: 50px;
     margin-right: 10px;
 }
-
-
 /* Cambia el color de fondo al hacer clic en los campos */
 .form-control:focus {
     background-color: #ccc;
@@ -82,3 +90,110 @@ a:hover {
     padding: 6px 12px;
     border-radius: 4px;
 }
+.grid-container {
+    display: grid;
+    height: 100vh;
+    align-content:normal;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Columnas con ancho mínimo de 400px */
+    gap: 10px;
+    padding: 10px;
+    margin-top: 25px;
+  }
+  
+  .grid-container > div {
+   
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 10px; 
+    
+  }
+  
+  .grid-container > div img {
+    max-width: 100%; /* La imagen no debe exceder el tamaño del contenedor padre */
+    width: 100%; 
+    height: 100%; /* La imagen abarcará todo el alto disponible */
+    object-fit: cover; /* Mantiene la relación de aspecto original de la imagen y la ajusta para cubrir todo el contenedor */
+    border-radius: 10px; /* Puedes ajustar el redondeo según tus necesidades */
+  }
+    
+  
+  * {
+    box-sizing: border-box;
+    border-radius: 10px; 
+  }
+  .vista-previa {
+              position: relative;
+              overflow: hidden;
+          }
+  
+          .vista-previa img {
+              max-width: 100%;
+              height: auto;
+              border-radius: 8px;
+              transition: transform 0.3s;
+              cursor: pointer;
+          }
+  
+          .vista-previa:hover img {
+              transform: scale(1.1);
+          }
+  .titulo-overlay {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              padding: 10px;
+              background-color: rgba(0, 0, 0, 0.7);
+              color: #fff;
+              text-align: center;
+              opacity: 0;
+              transition: opacity 0.3s;
+          }
+          
+          .vista-previa:hover .titulo-overlay {
+              opacity: 1;
+          }
+  .header {
+    color: white; /* Asegúrate de que el texto sea legible en la imagen de fondo */
+  }
+  .header img {
+      max-width: 50px; /* Ajusta el ancho de la imagen según sea necesario */
+      height: auto; 
+      margin-right: 20px; /* Espacio a la derecha de la imagen */
+  }
+  
+  .menu {
+    width: 20%;
+    height: 100vh;
+    background-color: #323232;
+    float: left;
+    padding: 10px;
+    margin-top: 25px;
+  }
+  /* Side navigation links */
+  .menu a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .menu a:hover {
+    background-color: #ddd;
+    color: #555;
+  }
+  
+  /* Style the content */
+  .content {
+    margin-left: 100px;
+    padding-left: 20px;
+  }
+  
+  .main {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    padding: 15px;
+  }
